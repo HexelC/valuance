@@ -1,0 +1,364 @@
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    background-color: #333;
+}
+body.shaded::before {
+    display: block;
+    content: ' ';
+    position: fixed;
+    background-color: #000;
+    opacity: 0.6;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+}
+body.home.shaded::before {
+    opacity: 0.3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-weight: bold;  
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+
+a {
+    color: #00F;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#logo img {
+    height: 50px;
+}
+#logo:focus {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+#header-container {
+    padding: 20px;
+}
+#header-container.opaque {
+    background-color: #1e2744;
+}
+#main-navigation {
+    align-items: center;
+    margin-top: 20px;
+    display: flex;
+    font-size: 0px;
+    border-top: solid 1px #f00;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px;
+}
+#main-navigation a {
+    text-align: center;
+    flex-grow: 1;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 50px;
+    padding: 0px 20px;
+    margin: 0px;
+    height: 50px;
+    box-sizing: border-box;
+    border-top: solid 3px rgba(255, 0, 0, 0);
+    text-transform: uppercase;
+    flex-basis: 0;
+    display: inline-block;
+}
+#main-navigation a:hover,
+#main-navigation a:focus {
+    border-top-color: rgba(255, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.site-header {
+    width: 100%;
+}
+.layout-content {
+    position: relative;
+    padding: 40px;
+    background-color: #FFF;
+}
+.layout-content::after {
+    display: block;
+    content: ' ';
+    clear: both;
+}
+.viewport-sized-section {
+    width: 100%;
+    min-height: 100vh;
+    color: #FFF;
+    background-color: transparent;
+}
+.viewport-sized-section a {
+    color: #9a9aff;
+}
+.viewport-sized-section:first-of-type {
+    min-height: calc(100vh - 114px);
+}
+#flavor-text-box {
+    display: flex;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    flex-direction: row;
+    align-items: center;
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: 2px 2px #000;
+}
+#flavor-text-box h2 {
+    text-transform: uppercase;
+}
+
+#flavor-text-box > div {
+    border: solid 10px #f00;
+    padding: 20px;
+    margin: 0 20px;
+    border-radius: 20px;
+    border-style: none solid;
+    max-width: 400px;
+}
+
+p:last-child {
+    margin-bottom: 0px;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.home header {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.half-page-content {
+    width: 50%;
+}
+
+.featured-link-boxes {
+    display: flex;
+    color: #FFF;
+    width: 100%;
+}
+
+.featured-link-boxes > div {
+    flex-grow: 1;
+}
+
+.featured-link-boxes a {
+    text-align: center;
+    line-height: 197px;
+    color: #FFF;
+    text-transform: uppercase;
+    padding: 0px 20px;
+    position: relative;
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: inset 3px rgba(0, 0, 0, 0.5);
+}
+
+.featured-link-boxes a:hover,
+.featured-link-boxes a:focus     {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-bottom-color: #f00;
+}
+
+.layout-content.standard {
+    text-align: center;
+}
+
+.layout-content.standard h2 {
+    color: #F00;
+}
+
+.value-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-basis: 0;
+}
+.value-boxes > div {
+    margin: 5px;
+    display: inline-block;
+    background-color: #EEE;
+    padding: 20px;
+    flex-grow: 1;
+    min-width: 150px;
+}
+
+.value-boxes h3 {
+    color: #3b5cad;
+}
+
+footer {
+    background-color: #FFF;
+    color: #555;
+    padding: 20px;
+    font-size: 14px;
+    clear: both;
+}
+
+.service-columns {
+    background-color: #FFF;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: center;
+    border-bottom: solid 1px #333;
+}
+
+.service-columns > div {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    padding: 0px;
+    border-right: solid 1px #333;
+}
+.service-columns > div:last-child {
+    border-right: none;
+}
+
+.service-columns > div ul {
+    margin: 40px;
+    padding: 0px;
+    list-style: none;
+}
+.service-columns > div ul li {
+    margin-bottom: 10px;
+}
+
+.service-columns > div h2 {
+    display: flex;
+    margin: 0px;
+    height: 200px;
+    align-items: center;
+    justify-content: space-around;
+    text-shadow: 2px 2px #000;
+    color: #FFF;
+    padding: 40px;
+    position: relative;
+    background-color: #333;
+}
+.service-columns > div h2 span {
+    z-index: 2;
+}
+
+.service-columns a {
+    color: #333;
+}
+.service-columns a:hover,
+.service-columns a:focus {
+    color: #f00;
+    font-weight: bold;
+}
+
+.service-columns a::after {
+    content: '\000A0 \0226B';
+    content: '\000A0\000A0\000A0 >>';
+    display: inline-block;
+    color: #f00;
+    letter-spacing: -1px;
+}
+
+.jumbo-quote {
+    color: #555;
+    background-color: #eee;
+    text-align: left;
+    padding: 80px;
+    font-size: 32px;
+}
+.jumbo-quote p {
+    max-width: 500px;
+    margin: 0 auto;
+    font-weight: bold;
+}
+.jumbo-quote .author {
+    font-size: 16px;
+    text-align: right;
+    font-weight: normal;
+}
+
+.industries-grid {
+    font-size: 0px;
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.industries-grid {}
+
+.industries-grid li {
+    text-align: center;
+    width: 25%;
+    border: none;
+    display: inline-block;
+    margin: 0;
+    box-sizing: border-box;
+    background-position: center center;
+    background-size: 100%;
+    transition: all 0.25s;
+}
+.industries-grid li:hover {
+    background-size: 110%;
+}
+
+.industries-grid a {
+    transition: all 0.25s;
+    display: flex;
+    margin: 0px;
+    height: 200px;
+    align-items: center;
+    justify-content: space-around;
+    text-shadow: 2px 2px #000;
+    color: #FFF;
+    padding: 40px;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: inset 3px rgba(0, 0, 0, 0);
+}
+
+.industries-grid a:hover,
+.industries-grid a:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-color: #f00;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.team-member-profile {
+    margin-bottom: 40px;
+}
+.shade {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}

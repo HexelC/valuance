@@ -1,0 +1,9 @@
+<?php
+
+function valuance_preprocess_page(&$variables)
+{
+    $fid = theme_get_setting('default_background_image');
+    $variables['default_background_image'] = "fuck you";
+    $variables['disclaimer_text'] = theme_get_setting('disclaimer_text');
+    $variables['copyright'] = theme_get_setting('copyright');
+}

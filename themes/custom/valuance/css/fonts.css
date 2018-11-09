@@ -1,0 +1,17 @@
+@font-face {
+    font-family: CenturyGothic;
+    font-weight: normal;
+    src: url(/themes/custom/valuance/css/fonts/Century%20Gothic%20Family/CenturyGothic.ttf);
+}
+
+@font-face {
+    font-family: MinionPro;
+    font-weight: normal;
+    src: url(/themes/custom/valuance/css/fonts/Minion%20Pro/Minion-Pro.ttf);
+}
+
+@font-face {
+    font-family: MinionPro;
+    font-weight: bold;
+    src: url(/themes/custom/valuance/css/fonts/Minion%20Pro/Minion%20Pro%20Bold.ttf);
+}

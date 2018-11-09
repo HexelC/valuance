@@ -1,0 +1,11 @@
+{# Front Page Template #}
+{% extends directory ~ "/templates/base.html.twig" %}
+
+{# Theme-wide blocks #}
+{% block page_title %}Break Trails{% endblock %}
+{% block background_image %}/themes/custom/valuance/images/home-bg.jpg{% endblock %}
+{% block content_region %}
+  <div class="layout-content viewport-sized-section half-page-content">
+    {{ page.content }}
+  </div>  
+{% endblock %}

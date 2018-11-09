@@ -1,0 +1,117 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: CenturyGothic;
+    text-transform: uppercase;
+}
+
+body {
+    font-family: MinionPro;
+}
+
+header {
+    background-color: #FFF;
+}
+
+#site-logo {
+    height: 40px;
+    margin: 20px;
+}
+
+#above-header-region {
+    justify-content: flex-end;
+}
+
+#above-header-region nav {
+    padding: 0px;
+    text-align: right;
+}
+
+#above-header-region nav h2 {
+    color: #FFF;
+    margin: 0px;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+#above-header-region nav ul {
+    list-style: none;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+
+#above-header-region nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#above-header-region nav a {
+    color: #CCC;
+}
+
+#header-container nav ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#header-container nav ul li {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+#header-container nav ul li a {
+    font-family: CenturyGothic;
+    line-height: 80px;
+    font-size: 20px;
+    padding: 0px 10px;
+    height: 80px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+#header-container nav ul li a:hover {
+    border-bottom: solid 5px #003087;
+    text-decoration: none;
+}
+
+.page-header {
+    background-color: #37374E;
+    padding: 80px;
+    color: #FFF;
+}
+
+#splash-view {
+    background-color: #37374E;
+    color: #FFF;
+}
+
+#splash-view img {
+    height: 100px;
+}
+
+.jumbo-block {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    position: relative;
+}
+
+.lamp-bg::before {
+    z-index: -1;
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-image: url(/themes/custom/valuance/images/lamp-bg.jpg);
+    filter: brightness(0.5);
+}
+
+#block-valuance-content {
+    padding: 40px 20px;
+}

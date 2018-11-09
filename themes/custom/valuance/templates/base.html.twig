@@ -1,0 +1,63 @@
+{# Theme-wide variables #}
+{%
+  set body_classes = [
+    background_image is defined ? 'shaded',
+    is_front ? 'home'
+  ]
+%}
+{% set logo_image = directory ~ '/images/ValuanceLogo_White.png' %}
+
+{# Theme-wide markup and blocks #}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  {% if block('page_title') is defined %}
+    <title>{{ block('page_title') }} | Valuance</title>
+  {% else %}
+    <title>{{ default_title }}</title>
+  {% endif %}
+  <link href="{{ directory ~ 'css/bootstrap.min.css' }}" type="text/css" rel="stylesheet">
+  <link href="{{ directory ~ 'css/styles.css' }}" type="text/css" rel="stylesheet">
+</head>
+
+<body class="{{ body_classes|join(' ') }}"
+  style="background-image: url('{{ block('background_image') }}')"
+>
+  
+  <header class="sticky-top">
+    <div id="header-container" class="{{ header_container_class|default('') }}">
+      <nav class="site-header sticky-top py-1">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+          <a id="logo" class="py-2" href="/">
+            <h1><img src="/{{ logo_image }}" alt="Valuance"></h1>
+          </a>
+          {{ page.navigation }}
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {% block content_region %}
+      <div class="layout-content viewport-sized-section half-page-content">
+        <a id="main-content" tabindex="-1"></a>
+        <h2>{% block page_title %}{% endblock %}</h2>
+        {% block main_content %}{% endblock %}
+      </div>
+    {% endblock %}
+    {% block secondary_content %}{% endblock %}
+  </main>
+
+  <footer class="sticky-footer text-right">
+    <p class="float-left">{{ disclaimer_text }}</p>
+    <p>{{ copyright|raw }}</p>
+    <p>{{ page.foo }}</p>
+  </footer>
+
+  <script src="{{ directory ~ 'js/bootstrap.min.js' }}"></script>
+
+</body>
+
+</html>

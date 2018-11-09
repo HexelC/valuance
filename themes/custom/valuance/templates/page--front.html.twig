@@ -1,0 +1,21 @@
+{# Front Page Template #}
+{% extends directory ~ "/templates/base.html.twig" %}
+
+{# Page-specific blocks and variables #}
+{% set flavor_heading = "Break Trail" %}
+{% block flavor_text %}
+  <p>verb: to hike in the lead position, forgoing one's way through the path not traveled.</p>
+  <p><a href="/team">Meet Valuance's pacesetters.</a></p>
+{% endblock %}
+
+{# Theme-wide blocks #}
+{% block page_title %}Break Trails{% endblock %}
+{% block background_image %}{{ directory ~ '/images/home-bg.jpg' }}{% endblock %}
+{% block content_region %}
+  <div class="layout-content viewport-sized-section">
+    <div id="flavor-text-box">
+      <h2>{{ flavor_heading }}</h2>
+      <div>{{ block('flavor_text') }}</div>
+    </div>
+  </div>
+{% endblock %}
